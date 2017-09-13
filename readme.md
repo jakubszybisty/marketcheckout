@@ -20,8 +20,11 @@ Existing Items and SpecialPromotions are localized in the marketcheckout\src\mai
 # Crucial classes and implementation choices
 
 SpecialPromotion - entity responsible for declaring promotion interactions between two items
+
 com.jszybisty.marketcheckout.service.discount - package responsible for applying discounts depending on quantity of bought items of certain type
+
 com.jszybisty.marketcheckout.service.specialpromotions - package responsible for promotions based on interactions between items in basket 
+
 BasketBuilder - elastic and flexible class for creating Baskets. Designed to easly turn on/off given promotions and discounts.
 
 I assumed items passed to basket will not be counted based on type. I decided to ignore not existing items passed to checkout controller rather than validate them.

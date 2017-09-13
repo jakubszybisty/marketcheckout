@@ -30,7 +30,6 @@ public class BasketControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Ignore
     @Test
     public void shouldCheckoutBasketAndReturnStatusCode200() throws Exception {
         final ItemDto firstItem = new ItemDto();
@@ -47,7 +46,6 @@ public class BasketControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Ignore
     @Test
     public void shouldCheckoutBasketAndReturnStatusCode500WhenRequestBodyIsEmpty() throws Exception {
         mockMvc.perform(post(BASKET)
